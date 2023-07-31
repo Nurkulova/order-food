@@ -1,5 +1,7 @@
 import React, { useRef } from 'react';
 import styled  from 'styled-components';
+import { Button } from '../UI/Button';
+
 export const MealItemForm = () => {
   const amountInputRef = useRef();
 
@@ -22,7 +24,7 @@ export const MealItemForm = () => {
           step="1"
           defaultValue="1"
         /> </InputWrapper>
-      <button type="button">Add</button>
+      <Button type="button">Add</Button>
       </FormWrapper>
   );
 };
