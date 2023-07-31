@@ -1,0 +1,71 @@
+import React from "react";
+import { BasketIcon } from "../../assets";
+import styled  from 'styled-components'
+
+export const HeaderCardButton = () => {
+  return (
+    <StyledButton>
+      <BasketIcon />
+      <span className="bump">Your card</span>
+      <Badge>7</Badge>
+    </StyledButton>
+  );
+};
+const Badge = styled('span')`
+    background-color:rgba(138, 43, 6, 1);
+    font-weight:700;
+    padding:4px 20px;
+    border-radius:30px;
+    font-size:20px;
+    margin-left:1rem;
+`  
+
+
+const StyledButton = styled('button')`
+    cursor: pointer;
+    border: none;
+    color:white;
+    background-color:rgba(90, 31, 8, 1);
+    padding:0.75rem 2rem;
+    border-radius: 30px;
+    &:hover,
+    &:active{
+        background-color:#461805;
+
+    }
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+
+    &:hover,
+    &:active  > ${Badge}{
+        background-color:#671f03;
+        animation:BUMP 300ms ease-out
+    }
+    & > svg{
+        margin-right:0.5rem
+    }
+    & > .bump{
+        font-size:1rem;
+        font-weight:600;
+    }
+
+    @keyframes BUMP {
+    0% {
+        transform: scale(1);
+    }
+    10% {
+        transform: scale(0.9);
+    }
+    30% {
+        transform: scale(1.1);
+    }
+    50% {
+        transform: scale(1.15);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+`
+

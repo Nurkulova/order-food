@@ -1,0 +1,58 @@
+import React from 'react'
+import { MealsBannerImage } from '../../assets'
+import styled  from 'styled-components'
+import { Meals } from './Meals'
+
+export const MealsSummary = () => {
+  return (
+    <section>
+        <MainImageWrapper>
+            <img src = {MealsBannerImage} alt = "Meals"/>
+        </MainImageWrapper>
+        <MealsSummaryContainer>
+            <h2>Delicious Food, Delivered To You</h2>
+            <p>
+            Choose your favorite meal from our broad selection of available meals and enjoy a delicious
+            lunch ordinner athome.
+            </p>
+            <p>
+            All our meals are cooked with high-quality ingredients, just-in-time and of course by
+            experienced chefs!
+            </p>
+        </MealsSummaryContainer>
+        <Meals/>
+    </section>
+  )
+}
+
+
+const MainImageWrapper = styled('div')`
+    width:100%;
+    height:25rem;
+    z-index: 0;
+    overflow:hidden;
+    & > img {
+        object-fit:cover;
+    }
+`
+
+const MealsSummaryContainer = styled('div')`
+    text-align:center;
+    max-width: 45rem;
+    width:100%;
+    margin:0 auto;
+    background-color:rgba(56, 56, 56, 1);
+    color:white;
+    border-radius:16px;
+    padding:1rem;
+    box-shadow:0px 6px 16px 0px #0000004d;
+    margin-top:-10rem;
+    position:relative;
+    & > h2{
+        font-size:2rem;
+        margin:20px;
+    }
+    & > p{
+        padding:10px;
+    }
+`
