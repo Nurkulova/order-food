@@ -1,5 +1,4 @@
 import React from "react";
-
 export const Button = ({
   children,
   onClick,
@@ -11,8 +10,10 @@ export const Button = ({
   return (
     <button>
       {" "}
-      onCkick = {onClick} disabled = {disabled} {...restProps}
+      onCkick = {onClick} 
+      disabled = {disabled}
       {children}
+      {...restProps}
     </button>
   );
 };

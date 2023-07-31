@@ -6,9 +6,7 @@ function App() {
     <div>
        <Header/>
       <MealsSummary/>
-      {/*<Meals/>
-      <MealItem/>
-       */}
+      
     </div>
   );
 }
