@@ -1,7 +1,6 @@
 import React from 'react'
 import { MealsBannerImage } from '../../assets'
 import styled  from 'styled-components'
-import { Meals } from './Meals'
 
 export const MealsSummary = () => {
   return (
@@ -20,7 +19,6 @@ export const MealsSummary = () => {
             experienced chefs!
             </p>
         </MealsSummaryContainer>
-        <Meals/>
     </section>
   )
 }
