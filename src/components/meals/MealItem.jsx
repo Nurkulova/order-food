@@ -1,5 +1,5 @@
 import React from 'react';
-import {MealItemForm} from './MealItemForm'; // Path to the MealItemForm component
+import {MealItemForm} from './MealItemForm'; 
 import  styled  from 'styled-components';
 
 export const MealItem = ({title, description, price}) => {
